@@ -1,21 +1,22 @@
 # RaftExampleApp
 
-**TODO: Add description**
+Start with `iex -S mix`
 
-## Installation
+Test manually with Telnet. Later on a sample client will be introduced for easier visualisation.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `raft_example_app` to your list of dependencies in `mix.exs`:
+```text
+$ telnet localhost 4200
+login wannes
+<<noreply here>>
+UP IN
+<<starts moving upwards>>
+UP OUT
+<<stops>>
 
-```elixir
-def deps do
-  [
-    {:raft_example_app, "~> 0.1.0"}
-  ]
-end
+UP IN
+...
+LEFT IN
+<<this movement is ignored for now. One movement direction at a time>>
+UP OUT
+<<stops moving>>
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/raft_example_app>.
-
