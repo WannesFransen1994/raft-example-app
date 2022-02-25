@@ -12,6 +12,10 @@ defmodule RaftExampleApp.Player.PlayerOperations do
     end
   end
 
+  def log_out(player_name) do
+    PlayerInstance.log_out(player_name)
+  end
+
   def list_logged_in_players() do
     Registry.select(AppRegistry, [{{:"$1", :_, :_}, [], [:"$1"]}])
   end
